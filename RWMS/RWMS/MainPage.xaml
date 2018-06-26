@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RWMS.MainPage"
+             BackgroundColor="DarkSeaGreen">
+
+    <Grid
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label 
+            Grid.ColumnSpan="2"
+            Text="Rediant WMS"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Blue"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" />
+       
+        <Label 
+            Grid.Row="1"
+            Text="User Name"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" />
+
+        <Entry
+            x:Name="txtUser"
+            Grid.Column="1"
+            Grid.Row="1"
+            Placeholder="Username"/>
+
+        <Label 
+            Grid.Row="2"
+            Text="Password"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" />
+
+        <Entry
+            x:Name="txtPass"
+            Grid.Column="1"
+            Grid.Row="2"
+            Placeholder="Password"/>
+
+        <Button
+            x:Name="btnLogin"
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Login"
+            Clicked="btnLogin_Clicked"/>
+
+        <Button
+            x:Name="btnExit"
+            Grid.Row="3"
+            Grid.Column="1"
+            Text="Exit"
+            Clicked="btnExit_Clicked"/>
+
+    </Grid>
+
+</ContentPage>
