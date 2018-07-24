@@ -3,11 +3,269 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RWMS.DashboardPage"
              BackgroundColor="DarkSeaGreen">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+      
+        <Grid
+            ColumnSpacing="0"
+            RowSpacing="0">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                HorizontalTextAlignment="Center"
+                Grid.ColumnSpan="6"
+                Text="Product Master (Add)"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Product Id"
+                Grid.Row="1"/>
+            
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                x:Uid="txtProductId"
+                x:Name="txtProductId"/>
+            
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Customer Specific"
+                Grid.Row="2"/>
+
+            <Picker
+                Grid.Row="2"
+                Grid.Column="1"
+                x:Uid="pickerCP"
+                x:Name="pickerCP">
+                <Picker.Items>
+                    <x:String>Yes</x:String>
+                    <x:String>No</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Customer"
+                Grid.Row="3"/>
+
+            <Entry
+                Grid.Row="3"
+                Grid.Column="1"
+                x:Uid="txtCustomer"
+                x:Name="txtCustomer"/>
+
+            <Entry
+                IsEnabled="False"
+                Grid.Row="3"
+                Grid.Column="2"
+                x:Uid="txtCustomer1"
+                x:Name="txtCustomer1"/>
+            
+            <Button
+                Text="."
+                HorizontalOptions="Fill"
+                Grid.Row="3"
+                Grid.Column="3"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Product Code"
+                Grid.Row="4"/>
+
+            <Entry
+                Grid.Row="4"
+                Grid.Column="1"
+                x:Uid="txtProductCode"
+                x:Name="txtProductCode"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Product Name"
+                Grid.Row="5"/>
+
+            <Entry
+                Grid.ColumnSpan="4"
+                Grid.Row="5"
+                Grid.Column="1"
+                x:Uid="txtProductName"
+                x:Name="txtProductName"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Group"
+                Grid.Row="6"/>
+
+            <Entry
+                Grid.Row="6"
+                Grid.Column="1"
+                x:Uid="txtGroup"
+                x:Name="txtGroup"/>
+
+            <Entry
+                Grid.ColumnSpan="3"
+                IsEnabled="False"
+                Grid.Row="6"
+                Grid.Column="2"
+                x:Uid="txtGroup1"
+                x:Name="txtGroup1"/>
+
+            <Button
+                Text="."
+                HorizontalOptions="Fill"
+                Grid.Row="6"
+                Grid.Column="5"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Sub-Group"
+                Grid.Row="7"/>
+
+            <Entry
+                Grid.Row="7"
+                Grid.Column="1"
+                x:Uid="txtsubGroup"
+                x:Name="txtsubGroup"/>
+
+            <Entry
+                Grid.ColumnSpan="3"
+                IsEnabled="False"
+                Grid.Row="7"
+                Grid.Column="2"
+                x:Uid="txtsubGroup1"
+                x:Name="txtsubGroup1"/>
+
+            <Button
+                Text="."
+                HorizontalOptions="Fill"
+                Grid.Row="7"
+                Grid.Column="5"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Storage Type"
+                Grid.Row="8"/>
+
+            <Entry
+                Grid.Row="8"
+                Grid.Column="1"
+                x:Uid="txtStorageType"
+                x:Name="txtStorageType"/>
+
+            <Entry
+                Grid.ColumnSpan="3"
+                IsEnabled="False"
+                Grid.Row="8"
+                Grid.Column="2"
+                x:Uid="txtStorageType1"
+                x:Name="txtStorageType1"/>
+
+            <Button
+                Text="."
+                HorizontalOptions="Fill"
+                Grid.Row="8"
+                Grid.Column="5"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Packed Product"
+                Grid.Row="9"/>
+
+            <Picker
+                Grid.Row="9"
+                Grid.Column="1"
+                x:Uid="pickerPackedProduct"
+                x:Name="pickerPackedProduct">
+                <Picker.Items>
+                    <x:String>Yes</x:String>
+                    <x:String>No</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Packing Size"
+                Grid.Column="2"
+                Grid.Row="9"/>
+
+            <Entry
+                Grid.Row="9"
+                Grid.Column="3"
+                x:Uid="txtPackingSize"
+                x:Name="txtPackingSize"/>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Packing Unit"
+                Grid.Column="4"
+                Grid.Row="9"/>
+            
+            <StackLayout 
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="9"
+                Grid.Column="5"
+                Orientation="Horizontal">
+                
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    x:Uid="txtPackingUnit"
+                    x:Name="txtPackingUnit"/>
+                
+                <Button
+                    Text="."
+                    WidthRequest="40"
+                   />
+
+            </StackLayout>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Base Unit"
+                Grid.Row="10"/>
+
+            <StackLayout 
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="10"
+                Grid.Column="1"
+                Orientation="Horizontal">
+
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    x:Uid="txtBaseUnit"
+                    x:Name="txtBaseUnit"/>
+
+                <Button
+                    Text="."
+                    WidthRequest="40"
+                   />
+
+            </StackLayout>
+
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
